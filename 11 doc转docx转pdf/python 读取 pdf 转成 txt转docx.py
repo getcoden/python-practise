@@ -19,7 +19,7 @@ time1 = time.time()
 # print("初始时间为：",time1)
 
 
-text_path = r'11.pdf'
+text_path = r'D:\教学工具软件\冰点文库下载器 3.2.10 去广告版\冰点文库下载器 3.2.10 去广告版\kpdf\Python语言：程序设计课程教学改革的理想选择-最新教育资料.pdf'
 # text_path = r'photo-words.pdf'
 
 
