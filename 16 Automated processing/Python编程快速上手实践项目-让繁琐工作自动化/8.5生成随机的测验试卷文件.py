@@ -1,6 +1,7 @@
 import random
 import os
 
+# new 为当前工作目录里的文件夹，此句是为了在当前工作目录里创建生成的文件
 os.chdir(os.path.join(os.getcwd(), 'new'))
 
 
