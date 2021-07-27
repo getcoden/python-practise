@@ -1,4 +1,4 @@
-# python 批量将文件夹内所有 doc 转成 docx  完美运行
+# python 批量将文件夹内所有 doc 转成 docx  完美运行（只有这个可以正常运行）
 
 import os
 from win32com import client
@@ -25,7 +25,7 @@ def find_file(path, ext, file_list=[]):
     return file_list
 
 
-dir_path = r"D:\my_code\Secret_contract"  # 批量转换文件夹
+dir_path = r"D:\my_code\1"  # 批量转换文件夹
 ext = ".doc"
 file_list = find_file(dir_path, ext)
 for file in file_list:

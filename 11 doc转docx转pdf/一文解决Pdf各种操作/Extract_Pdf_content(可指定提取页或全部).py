@@ -23,5 +23,5 @@ extract_text_info(r"D:\pdf\Docker入门教程.pdf")
 
 with pdfplumber.open(filepath) as pdf:
  # 获取全部数据
- for page in pdf.pages
- print(page.extract_text())
+    for page in pdf.pages
+        print(page.extract_text())
