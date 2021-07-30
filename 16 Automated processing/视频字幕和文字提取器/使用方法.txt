@@ -1,0 +1,38 @@
+使用方法:
+1. 安装 python3 64 位的
+2. 安装以下支持库 (有基础的不会看不懂吧):
+pip install paddlepaddle 
+pip install paddlehub 
+pip install shapely 
+pip install pyclipper 
+3. 如果是使用了 Anaconda 环境的，那就去你的 Anaconda 环境中文件搜索 geos_c.dll 和 geos.dll   然后把 geos_c.dll 拷贝放入 Anaconda3\Library\bin 目录中
+4. 设置配置文件  打开 配置.txt 然后按照你的需求和实际情况填写设置 (大部分保持默认就行)
+
+视频地址 ="下载.mp4"
+判断帧间隔 ="60"
+识别结果保存目录 ="test.txt"
+是否可视化 ="是"
+精准识别 ="否"
+GPU="否"
+注意 (请在引号里面修改内容，不要去改变格式):
+1. 精准识别不建议开启，必须电脑非常好并且 GPU 填是才能使用，不然速度很慢！
+2. 如果开始可视化，则会有识别过程显示，并且会在 ocr_result 中把图片文件保存
+3.gpu 如果电脑差，开启有时候会比不开慢...
+4. 判断帧决定多少帧去识别一次，所以大概是帧率的 2 倍就可以了，如果碰到说话慢的就可以多加点
+5. 识别结果都是累加的结果，所以请手动清空，或者改文件名
+6. 视频地址就是你的视频的文件名和目录
+5. 直接使用命令行调用 python main.py
+(请调用前用命令将目录切换到文件所在目录例如 cd /d D:\ 视频文字内容提取)
+
+
+上楼分享：
+
+分享一下我踩的坑，按照楼主安装完 3 个支持库后，还是需要安装一大堆库
+后面跑起来还是提示缺一个 paddle.fluid 模块
+最后是安装了 paddlepaddle 这个模块才解决的
+PS：不知道为什么广东电信连到清华的源超级慢，甚至会丢失链接，后来改到百度源就没问题了，建议飙红字的小伙伴可以换百度源
+例：
+pip install paddlehub --upgrade -i https://mirror.baidu.com/pypi/simple
+pip install shapely -i https://mirror.baidu.com/pypi/simple
+pip install pyclipper -i https://mirror.baidu.com/pypi/simple
+pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
