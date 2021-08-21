@@ -55,7 +55,8 @@ def text_save(filename, data):  # filename为写入txt文件的路径，data为�
 
 ops = [['i', 'love', 'china'], ['happy', 'birthday']]
 text_save('./N_aa.txt', ops)
-os.system('explorer.exe ' + sPath)
+os.startfile(sPath)
+# os.system('explorer.exe ' + sPath)   #(不推荐此种用法)
 '''
 # Python：将 list 写入一个 txt 文件四种方法
 import re

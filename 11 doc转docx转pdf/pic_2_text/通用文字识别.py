@@ -15,15 +15,18 @@ def get_file_content(filePath):
         return fp.read()
 
 
-for root, dirs, files in os.walk(r"D:\21", topdown=False):
+for root, dirs, files in os.walk(r"C:\Users\win\Desktop\ccc", topdown=False):
     for name in files:
-        if 'jpg' in name:
-            filePath = os.path.join(root, name)[2:]
+        if 'png' in name:
+            filePath = os.path.join(root, name)
             options = {
                 'detect_direction': 'true',
                 'language_type': 'CHN_ENG',
             }
-            result = aipOcr.webImage(get_file_content(filePath), options)
-            # print(result)
-            for i in result['words_result']:
-                print(i['words'])
+            with open('C:/Users/win/Desktop/Pic2txt.txt', 'a') as f:
+                result = aipOcr.webImage(get_file_content(filePath), options)
+                # print(result)
+                for i in result['words_result']:
+                    f.write('\n' + i['words'] + '\n')
+    os.startfile(r'C:/Users/win/Desktop/Pic2txt.txt')  # 自动打开生成的 txt 文件
+    # print(i['words'])
