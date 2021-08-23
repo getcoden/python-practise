@@ -15,7 +15,7 @@ def get_file_content(filePath):
         return fp.read()
 
 
-for root, dirs, files in os.walk(r"C:\Users\win\Desktop\ccc", topdown=False):
+for root, dirs, files in os.walk(r"D:\1jieya\remove", topdown=False):
     for name in files:
         if 'png' in name:
             filePath = os.path.join(root, name)
