@@ -27,5 +27,5 @@ def pic2txt(dir_path):
                 f.write(line[1][0]+'\n')
 
 
-path = r"D:\1jieya\remove"
+path = r"C:\Users\win\Desktop\新建文件夹"
 pic2txt(path)
