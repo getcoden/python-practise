@@ -39,6 +39,7 @@ print(all_dfs.keys())
 df = pd.concat(all_dfs, ignore_index=True)
 print(df)
 
+# 如果想用的旧的工作薄作为文件，而且又不想里的工作数据被覆盖，只能用下面这种方法
 
 # 根据时间创建工作表名子
 
@@ -81,3 +82,9 @@ df1.to_excel(writer2)
 df2.to_excel(writer2, startcol=5, startrow=10)  # 表示第10行 第5列
 
 writer2.save()
+
+
+# 可以起的数据文件夹名子：source_dir = r'input'
+
+new_execl = "All in one.xlsx"
+raw_excels = os.listdir(source_dir)
