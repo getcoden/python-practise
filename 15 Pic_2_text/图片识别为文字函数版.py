@@ -18,7 +18,7 @@ def get_file_content(filePath):
 def get_txt(in_path, out_path):
     for root, dirs, files in os.walk(in_path, topdown=False):
         for name in files:
-            if 'jpg' in name:
+            if 'png' in name:
                 filePath = os.path.join(root, name)
                 options = {
                     'detect_direction': 'true',
@@ -36,6 +36,6 @@ def get_txt(in_path, out_path):
 
 if __name__ == '__main__':
 
-    in_path = r"C:\Users\win\Desktop\新建文件夹"
+    in_path = r"D:\1jieya\remove"
     out_path = r'C:/Users/win/Desktop/Pic_2_txt.txt'
     get_txt(in_path, out_path)

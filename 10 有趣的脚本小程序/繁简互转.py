@@ -9,7 +9,7 @@ for line in question_labels:
     line = line.strip('\n')
     q_zh.append(line)
 
-print(q_zh)
+# print(q_zh)
 # ['請問京都議定書規定幾個工業國家的二氧化碳排放量限制？', '請問首位自費太空旅行的觀光客為誰？',]
 
 # 第二步转换

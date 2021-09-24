@@ -29,6 +29,6 @@ def pyMuPDF_fitz(pdfPath, imagePath):
 
 
 if __name__ == "__main__":
-    pdfPath = r"D:\教学工具软件\冰点文库下载器 3.2.10 去广告版\冰点文库下载器 3.2.10 去广告版\kpdf\哪些人适合学Python培训，你在其中吗？.pdf"
+    pdfPath = r"D:\天翼云盘下载\电子工业版l六年级上册信息技术教案(安徽版)(第七册)教案 - 百度文库.pdf"
     imagePath = r"D:\1jieya\image"
     pyMuPDF_fitz(pdfPath, imagePath)
