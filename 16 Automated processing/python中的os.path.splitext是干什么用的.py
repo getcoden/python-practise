@@ -4,24 +4,23 @@
 
 import os
 
-path_01 = 'D:/User/wgy/workplace/data/notMNIST_large.tar.gar'
+path_01 = r"C:\Users\win\Desktop\2\try - 副本.xlsx"
 
-path_02 = 'D:/User/wgy/workplace/data/notMNIST_large'
+path_02 = r"C:\Users\win\Desktop\2\try.xlsx"
 
 root_01 = os.path.splitext(path_01)
 
 root_02 = os.path.splitext(path_02)
 
-print(root_01)
+print(root_01[0])
 
-print(root_02)
+print(root_02[0])
 
 # python中的os.path模块用法：
-
+'''
 dirname()   # 用于去掉文件名，返回目录所在的路径
 # 如：
 
-import os
 
 os.path.dirname('d:\\library\\book.txt')
 'd:\\library'
@@ -29,7 +28,6 @@ os.path.dirname('d:\\library\\book.txt')
 basename()   # 用于去掉目录的路径，只返回文件名
 # 如：
 
-import os
 
 os.path.basename('d:\\library\\book.txt')
 'book.txt'
@@ -37,7 +35,6 @@ os.path.basename('d:\\library\\book.txt')
 join()   # 用于将分离的各部分组合成一个路径名
 # 如：
 
-import os
 
 os.path.join('d:\\library', 'book.txt')
 'd:\\library\\book.txt'
@@ -45,14 +42,12 @@ os.path.join('d:\\library', 'book.txt')
 split()  # 用于返回目录路径和文件名的元组
 # 如：
 
-import os
 
 os.path.split('d:\\library\\book.txt')
 ('d:\\library', 'book.txt')
 
 splitdrive()    # 用于返回盘符和路径字符元组
 
-import os
 
 os.path.splitdrive('d:\\library\\book.txt')
 ('d:', '\\library\\book.txt')
@@ -65,3 +60,4 @@ os.path.splitext('d:\\library\\book.txt')
 
 os.path.splitext('book.txt')
 ('book', '.txt')
+'''
