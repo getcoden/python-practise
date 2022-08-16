@@ -5,7 +5,9 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 import os
 
-os.chdir(r"F:\My_Code")
+os.chdir(r"D:\APK")
+
+
 class GetBt:
     def __init__(self):
         self.keyword = ''

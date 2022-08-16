@@ -1,21 +1,22 @@
-
 import pandas as pd
 import os
 
 
-data = pd.read_excel('./ÎåÄê¼¶ÕËºÅºÍÃÜÂë.xls')#¶ÁÈ¡Êı¾İ
-data_list = list(data['°à¼¶'].drop_duplicates())#È¥ÖØ´¦Àí
-longth = len(data_list)#¼ÆËã¹²ÓĞ¶àÉÙÊıÁ¿
+data = pd.read_excel('./äº”å¹´çº§è´¦å·å’Œå¯†ç .xls')  # è¯»å–æ•°æ®
+data_list = list(data['ç­çº§'].drop_duplicates())  # å»é‡å¤„ç†
+longth = len(data_list)  # è®¡ç®—å…±æœ‰å¤šå°‘æ•°é‡
 path = './SplitExcel'
-if not os.path.exists(path):#µ±Ç°ÎÄ¼ş¼ĞÏÂÊÇ·ñÓĞ´ËÎÄ¼ş¼Ğ
-    os.mkdir(path)#´´½¨´ËÎÄ¼ş¼Ğ
+if not os.path.exists(path):  # å½“å‰æ–‡ä»¶å¤¹ä¸‹æ˜¯å¦æœ‰æ­¤æ–‡ä»¶å¤¹
+    os.mkdir(path)  # åˆ›å»ºæ­¤æ–‡ä»¶å¤¹
 count = 0
 for item in data_list:
-    data_select = data[data['°à¼¶']==item]#Ñ¡³öitem¶ÔÓ¦µÄĞĞ
-    Bigzone = data_select.iat[0,0]#ĞèÒª²ÎÓëÎÄ¼şÃüÃûµÄÖµ
-    Smallzone = data_select.iat[0,1]
-    service_code = data_select.iat[0,2]
-    data_select.to_excel('./SplitExcel/{0:}-{1:}.xlsx'.format(Bigzone,Smallzone),index=False)#°´ÕÕ¶ÔÓ¦µÄÖµÉú³ÉEXCELÎÄ¼ş
+    data_select = data[data['ç­çº§'] == item]  # é€‰å‡ºitemå¯¹åº”çš„è¡Œ
+    Bigzone = data_select.iat[0, 0]  # éœ€è¦å‚ä¸æ–‡ä»¶å‘½åçš„å€¼
+    Smallzone = data_select.iat[0, 1]
+    service_code = data_select.iat[0, 2]
+    data_select.to_excel(
+        './SplitExcel/{0:}-{1:}.xlsx'.format(Bigzone, Smallzone), index=False)  # æŒ‰ç…§å¯¹åº”çš„å€¼ç”ŸæˆEXCELæ–‡ä»¶
     count += 1
-    print('\rEXCEL±íÖĞ¹²ÓĞ {} ¸ö°à¼¶£¬ÕıÔÚ²ğ·ÖµÚ {} ¸öµÄÊı¾İ£¬²ğ·Ö½ø¶È£º{:.2%}'.format(longth, count, count / longth),end="")   
-print('\n{}¸öÃû³ÆÒÑ¾­È«²¿²ğ·ÖÍê±Ï£¬ÇëÇ°ÍùSplitExcelÎÄ¼ş¼ĞÏÂ²é¿´²ğ·ÖºóµÄ¸÷ÎÄ¼şÊı¾İ.'.format(longth))
+    print('\rEXCELè¡¨ä¸­å…±æœ‰ {} ä¸ªç­çº§ï¼Œæ­£åœ¨æ‹†åˆ†ç¬¬ {} ä¸ªçš„æ•°æ®ï¼Œæ‹†åˆ†è¿›åº¦ï¼š{:.2%}'.format(
+        longth, count, count / longth), end="")
+print('\n{}ä¸ªåç§°å·²ç»å…¨éƒ¨æ‹†åˆ†å®Œæ¯•ï¼Œè¯·å‰å¾€SplitExcelæ–‡ä»¶å¤¹ä¸‹æŸ¥çœ‹æ‹†åˆ†åçš„å„æ–‡ä»¶æ•°æ®.'.format(longth))

@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import youtube_dl
 import os
 
-os.chdir(r"D:\课件PPT\Reading at night Audio")
+os.chdir(r"D:\课件PPT\music")
 
 ydl_opts = {
     'format': 'bestaudio/best',
@@ -21,3 +21,5 @@ while 1:
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         print('正在下载:')
         ydl.download([y_url])
+
+
