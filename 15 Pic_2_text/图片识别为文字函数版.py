@@ -4,9 +4,9 @@ import os
 # 人工智能大法好，使用百度 api 批量识别图片上的文字：
 # 这是是批量识别，统统放进一个文件夹就 OK 啦～
 
-APP_ID = '24608598'
-API_KEY = 'kAHxRGWszGl95maX0GgIKpGC'
-SECRET_KEY = 'NA1or974XAPSCgo7SlmMoYBzzZKhgoGM'
+APP_ID = '27777886'
+API_KEY = '4VYr2B9k5rvvOCVHYpzVaQsg'
+SECRET_KEY = 'IFaIhSkWXUqq8iElNNfg9Pi1KATYfiCT'
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 

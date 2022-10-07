@@ -7,7 +7,7 @@
 import pandas as pd
 import os
 
-os.chdir(r"C:\Users\win\Desktop\1")
+os.chdir(r"C:\Users\win\Desktop\2")
 
 
 def my_log(info):

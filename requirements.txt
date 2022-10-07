@@ -190,7 +190,6 @@ python-bidi==0.4.2
 python-crontab==2.5.1
 python-dateutil==2.8.1
 python-docx==0.8.10
-python-Levenshtein @ file:///D:/python_Levenshtein-0.12.2-cp38-cp38-win_amd64.whl
 pyttsx3==2.90
 pytz==2020.1
 PyWavelets==1.1.1
@@ -266,5 +265,5 @@ xlutils==2.0.0
 xlwt==1.3.0
 yapf==0.31.0
 yarl==1.6.3
-you-get==0.4.1536
-youtube-dl==2021.6.6
+
+

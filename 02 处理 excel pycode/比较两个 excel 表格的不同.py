@@ -9,8 +9,8 @@ import copy
 
 # 读取excel文件
 # 括号中的字符串为你要比较的两个excel的路径，注意用“/”
-wb_a = openpyxl.load_workbook(r"C:\Users\win\Desktop\1.xlsx")
-wb_b = openpyxl.load_workbook(r"C:\Users\win\Desktop\2.xlsx")
+wb_a = openpyxl.load_workbook(r"C:\Users\win\Desktop\1\1.xlsx")
+wb_b = openpyxl.load_workbook(r"C:\Users\win\Desktop\1\2.xlsx")
 # 定义一个方法来获取表格中某一列的内容，返回一个列表
 # 将每一列输出为一个列表（temp表示列的名字）
 

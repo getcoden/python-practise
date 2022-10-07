@@ -1,7 +1,7 @@
 import youtube_dl
 import os
 
-os.chdir(r'设置下载文件保存的目录路径')  # 自定义设置下载文件保存的目录路径
+os.chdir(r'D:\\课件PPT')  # 自定义设置下载文件保存的目录路径
 while 1:
     ydl_opts = {}
     ysurl = input('要下载视频的地址:')
@@ -12,9 +12,9 @@ while 1:
         print('正在下载:')
         ydl.download([ysurl])
 
-    """
-    import youtube_dl
-    import os 
+"""
+import youtube_dl
+import os 
 # 设定
 """
 os.chdir(r'设置下载文件保存的目录路径')  # 自定义设置下载文件保存的目录路径 或者用以下方法

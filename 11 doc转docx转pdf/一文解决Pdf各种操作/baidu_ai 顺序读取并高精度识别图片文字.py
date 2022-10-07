@@ -30,20 +30,20 @@ for filename in path_list:
             'language_type': 'CHN_ENG',
         }
         with open('C:/Users/win/Desktop/Pic2txt.txt', 'a') as f:
-            result = aipOcr.webImage(get_file_content(filePath), options)
+            result = aipOcr.basicAccurate(get_file_content(filePath), options)
             # print(result)
             for i in result['words_result']:
                 f.write('\n' + i['words'] + '\n')
 os.startfile('C:/Users/win/Desktop/Pic2txt.txt')  # 自动打开生成的 txt 文件
-# print(i['words'])
+print(i['words'])
 
 """
 
 # 函数版，可自动创建文本文件
 
-APP_ID = '24608598'
-API_KEY = 'kAHxRGWszGl95maX0GgIKpGC'
-SECRET_KEY = 'NA1or974XAPSCgo7SlmMoYBzzZKhgoGM'
+APP_ID = '27777886'
+API_KEY = '4VYr2B9k5rvvOCVHYpzVaQsg'
+SECRET_KEY = 'IFaIhSkWXUqq8iElNNfg9Pi1KATYfiCT'
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 
@@ -55,14 +55,14 @@ def get_file_content(filePath):
 def get_txt(in_path, out_path):
     for root, dirs, files in os.walk(in_path, topdown=False):
         for name in files:
-            if 'png' in name:
+            if 'jpg' in name:
                 filePath = os.path.join(root, name)
                 options = {
                     'detect_direction': 'true',
                     'language_type': 'CHN_ENG',
                 }
                 with open(out_path, 'a') as f:
-                    result = aipOcr.webImage(
+                    result = aipOcr.basicAccurate(
                         get_file_content(filePath), options)
                     # print(result)
                     for i in result['words_result']:
@@ -73,10 +73,10 @@ def get_txt(in_path, out_path):
 
 if __name__ == '__main__':
 
-    in_path = r"D:\1\image"
-    out_path = r'C:/Users/win/Desktop/Pic_2_txt.txt'
+    in_path = r"D:\1jieya\image"
+    out_path = r'C:/Users/win/Desktop/2_txt.txt'
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     # with open(filename, "w") as f:
     get_txt(in_path, out_path)
-
-    """
+    
+"""
