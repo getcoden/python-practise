@@ -2,8 +2,9 @@
 import pandas as pd
 import os
 
-
-data = pd.read_excel('./五年级账号和密码.xls')  # 读取数据
+os.chdir(r"D:\天翼云盘下载\对比两个 excel 文件的异同")
+data = pd.read_excel(
+    r"D:\天翼云盘下载\对比两个 excel 文件的异同\六年级青骄账号密码.xls")  # 读取数据
 data_list = list(data['班级'].drop_duplicates())  # 去重处理
 longth = len(data_list)  # 计算共有多少数量
 path = './SplitExcel'

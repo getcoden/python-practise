@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import youtube_dl
 import os
 
-os.chdir(r"D:\课件PPT\music")
+os.chdir(r"D:\音乐")
 
 ydl_opts = {
     'format': 'bestaudio/best',
