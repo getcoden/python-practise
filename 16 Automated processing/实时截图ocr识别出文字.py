@@ -29,9 +29,9 @@ def Identify():
     from aip import AipOcr
 
     # 插入你申请的密钥
-    APP_ID = '24608598'
-    API_KEY = 'kAHxRGWszGl95maX0GgIKpGC'
-    SECRET_KEY = 'NA1or974XAPSCgo7SlmMoYBzzZKhgoGM'
+    APP_ID = '27777886'
+    API_KEY = '4VYr2B9k5rvvOCVHYpzVaQsg'
+    SECRET_KEY = 'IFaIhSkWXUqq8iElNNfg9Pi1KATYfiCT'
 
     client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
     image = GetFile(r"D:\TempPhoto\1.jpg")

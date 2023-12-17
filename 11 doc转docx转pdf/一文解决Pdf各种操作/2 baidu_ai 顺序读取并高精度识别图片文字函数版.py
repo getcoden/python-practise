@@ -1,6 +1,7 @@
 
 from aip import AipOcr  # 导入AipOcr模块，用于做文字识别
 import os
+import time
 
 
 # 函数版，可自动创建文本文件
@@ -26,7 +27,7 @@ def get_txt(in_path, out_path):
     print('图片文件为:' + str(path_list) + '\n')
     print('正在上传图片进行文字识别输出......')
     for filename in path_list:
-        if 'jpg' in filename:
+        if 'png' in filename:
             filePath = os.path.join(in_path, filename)
             options = {
                 'detect_direction': 'true',
@@ -36,14 +37,17 @@ def get_txt(in_path, out_path):
                 result = aipOcr.basicAccurate(
                     get_file_content(filePath), options)
                 # print(result)
+                time.sleep(2)   #由于并发限制为 2 秒，在进行非纯文本认识时只能加延时2秒处理才能成功。
                 for i in result['words_result']:
+                    # print(i)
                     f.write('\n' + i['words'] + '\n')
+    print('Done!')
     os.startfile(out_path)  # 自动打开生成的 txt 文件
 
 
 if __name__ == '__main__':
 
-    in_path = r"D:\1jieya\image"
+    in_path = r"C:\Users\win\Desktop\11\三上第七单元试卷及练习\（彩）2"
     out_path = r'C:/Users/win/Desktop/20_txt.txt'
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     # with open(filename, "w") as f:

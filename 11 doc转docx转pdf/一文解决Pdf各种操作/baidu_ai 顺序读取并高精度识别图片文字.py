@@ -1,5 +1,6 @@
 from aip import AipOcr  # 导入AipOcr模块，用于做文字识别
 import os
+import time
 
 
 # 人工智能大法好，使用百度 api 批量识别图片上的文字：
@@ -16,26 +17,28 @@ def get_file_content(filePath):
         return fp.read()
 
 
-path = r"D:\1jieya\image"
+path = r"C:\Users\win\Desktop\新建文件夹 (2)"
 path_list = os.listdir(path)
 path_list.sort(key=lambda x: int(x.replace("images_", "").split('.')[0]))
 # path_list.sort(key=lambda x: int(x.split('.')[0]))
 print('图片文件为:' + str(path_list) + '\n')
 print('正在上传图片进行文字识别输出......')
 for filename in path_list:
-    if 'jpg' in filename:
+    if 'png' in filename:
         filePath = os.path.join(path, filename)
         options = {
             'detect_direction': 'true',
             'language_type': 'CHN_ENG',
+
         }
         with open('C:/Users/win/Desktop/Pic2txt.txt', 'a') as f:
             result = aipOcr.basicAccurate(get_file_content(filePath), options)
+            time.sleep(3)
             # print(result)
             for i in result['words_result']:
                 f.write('\n' + i['words'] + '\n')
-os.startfile('C:/Users/win/Desktop/Pic2txt.txt')  # 自动打开生成的 txt 文件
-print(i['words'])
+#os.startfile('C:/Users/win/Desktop/Pic2txt.txt')  # 自动打开生成的 txt 文件
+# print(i['words'])
 
 """
 

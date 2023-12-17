@@ -6,14 +6,14 @@ import re
 import datetime
 
 # 新建一个AipOcr对象
-config = {
-    'appId': '24608598',
-    'apiKey': 'kAHxRGWszGl95maX0GgIKpGC',
-    'secretKey': 'NA1or974XAPSCgo7SlmMoYBzzZKhgoGM'
-}
-client = AipOcr(**config)
+APP_ID = '27777886'
+API_KEY = '4VYr2B9k5rvvOCVHYpzVaQsg'
+SECRET_KEY = 'IFaIhSkWXUqq8iElNNfg9Pi1KATYfiCT'
+client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-pic_dir = r"C:\Users\win\Desktop\1"
+
+
+pic_dir = r"D:\1jieya\2023试题"
 
 
 # 读取图片

@@ -29,15 +29,15 @@ def pyMuPDF_fitz(pdfPath, imagePath):
 
         print(pic_pwd)
 #         print(dir(pm._writeIMG))
-        pix._writeIMG(pic_pwd, 1)
+        # pix._writeIMG(pic_pwd, 1)
 
-        # pix._writeIMG(imagePath+'/'+'images_%s.png' % pg)  # 将图片写入指定的文件夹内
+        pix._writeIMG(imagePath+'/'+'images_%s.png' % pg)  # 将图片写入指定的文件夹内
 
     endTime_pdf2img = datetime.datetime.now()  # 结束时间
     print('pdf2img时间=', (endTime_pdf2img - startTime_pdf2img).seconds)
 
 
 if __name__ == "__main__":
-    pdfPath = r"D:\天翼云盘下载\北师大版六年级上册数学分数混合运算练习题.pdf"
+    pdfPath = r"D:\1jieya\22.pdf"
     imagePath = r"D:\1jieya\image"
     pyMuPDF_fitz(pdfPath, imagePath)
